@@ -1,3 +1,9 @@
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +11,61 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-y: hidden;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+.batterybox{
+  position: relative;
+  animation: mymove 3s;
+  /* animation-fill-mode: forwards; */
+}
+
+@keyframes mymove {
+  from {top: 200px; opacity: 0;}
+  to {top: 0px; opacity: 1;}
+}
+
+.textbatteryanimation {
+  position: relative;
+  color:black;
+  font-size: 65px;
+  line-height: 85px;
+}
+.textbatteryanimation::before {
+  content: attr(data-fill-text);
+  position: absolute;
+  width: 0%; 
+  height: 100%;
+  color:#03a10e;
+  
+  animation:width 1.5s cubic-bezier(0.165,0.84,0.44,1) forwards;
+  overflow: hidden;
+  animation-name: filltext;
+}
+
+.textbatterygreen {
+  color:#03a10e;
+}
+
+/* .text:hover::before {
+  width:100%
+} */
+
+@keyframes filltext {
+  0% {
+    width:0%;
+  }
+
+  100% {
+    width:100%;
+  }
+}
+
+
+
