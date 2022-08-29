@@ -1,5 +1,5 @@
 
-import { useRef } from 'react';
+import { useRef,useState} from 'react';
 
 import moon from '../assets/images/moon.png'
 import land from '../assets/images/land.png'
@@ -7,7 +7,8 @@ import cat from '../assets/images/cat.gif'
 
 import { Parallax, ParallaxLayer} from '@react-spring/parallax'
 function Scrollparallaxbasi() {
-    const ref = useRef();
+  const ref = useRef();
+
   return (
     <Parallax pages={4} ref={ref} className='w-screen'>
 

@@ -43,7 +43,6 @@ code {
   width: 0%; 
   height: 100%;
   color:#03a10e;
-  
   animation:width 1.5s cubic-bezier(0.165,0.84,0.44,1) forwards;
   overflow: hidden;
   animation-name: filltext;
@@ -68,4 +67,96 @@ code {
 }
 
 
+
+/* navdot */
+
+.slide {
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  opacity: 0;
+  transition: opacity ease-in-out 0.4s;
+}
+
+.active-anim {
+  opacity: 1;
+}
+
+
+@layer components {
+  .colornav-value {
+    @apply absolute w-1 h-0 overflow-hidden
+  }
+  .colornav-link {
+    @apply relative w-[42px] !p-[3px] z-[1] text-[#1d1d1f] h-[42px]  rounded-[50%] border-transparent border-[2px]
+  }
+  .colornav-label {
+    @apply absolute top-[100%] left-[50%] w-[100px] text-center ml-[-50px] h-auto pt-[7px] z-[1]
+  } 
+  
+}
+
+/* .colornav-value:checked~.colornav-link {
+  border: 2px solid #0071e3 ;
+  cursor: pointer;
+} */
+
+/* navdot color */
+
+.dotcolor_1 {
+  background-color: #394c38;
+}
+
+.dotcolor_2 {
+  background-color: #f1f2ed;
+}
+
+.dotcolor_3 {
+  background-color: #fae7cf;
+}
+
+.dotcolor_4 {
+  background-color:#54524f;
+}
+
+.dotcolor_5 {
+  background-color: #a7c1d9;
+}
+
+.dotactive_1 {
+  border: 2px solid #a7c1d9;
+  cursor: pointer;
+}
+
+.dotactive_2 {
+  border: 2px solid #a7c1d9;
+  cursor: pointer;
+}
+
+.dotactive_3 {
+  border: 2px solid #a7c1d9;
+  cursor: pointer;
+}
+
+.dotactive_4 {
+  border: 2px solid #a7c1d9;
+  cursor: pointer;
+}
+
+.dotactive_5 {
+  border: 2px solid #a7c1d9;
+  cursor: pointer;
+}
+
+.active {
+  border: 2px solid #a7c1d9;
+  cursor: pointer;
+}
+
+
+
+.text.hide {
+  display: none;
+}
 
